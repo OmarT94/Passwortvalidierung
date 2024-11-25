@@ -8,8 +8,8 @@ public class Test_PasswortValidierung {
     @Test
     void Check_If_Passwort_IstGrosserAls_Acht_Zeichen() {
 
-        String Acceptedpasswort ="qwertamr" ;
-        String actulPasswort=PasswortValidierung.IstPasswortGrosserAls_AchtZeichen(Acceptedpasswort);
+        String actulPasswort ="qqqqqqqq" ;
+        String  Acceptedpasswort=PasswortValidierung.IstPasswortGrosserAls_AchtZeichen(actulPasswort);
         Assertions.assertEquals(Acceptedpasswort,actulPasswort);
 
 
@@ -18,8 +18,8 @@ public class Test_PasswortValidierung {
     @Test
 
     void Chech_If_Passwort_enthaelt_Ziffern(){
-        String Acceptedpasswort ="Omartamr1" ;
-        String actulPasswort= PasswortValidierung.Passwortenthaelt_Ziffern(Acceptedpasswort);
+        String  actulPasswort ="Omartamr1" ;
+        String Acceptedpasswort= PasswortValidierung.Passwortenthaelt_Ziffern( actulPasswort);
         Assertions.assertEquals(Acceptedpasswort,actulPasswort);
 
     }
@@ -28,17 +28,24 @@ public class Test_PasswortValidierung {
     @Test
     void Check_If_PasswortEnthealt_GrossUndKlein_Buchstaben(){
 
-        String Acceptedpasswort ="OMAR TAMr" ;
-        String actulPasswort= PasswortValidierung.Passwort_Enthaelt_GrossUndKleinBuchstaben(Acceptedpasswort);
+        String actulPasswort ="OMAR TAMr" ;
+        String Acceptedpasswort= PasswortValidierung.Passwort_Enthaelt_GrossUndKleinBuchstaben(actulPasswort);
         Assertions.assertEquals(Acceptedpasswort,actulPasswort);
     }
 
     @Test
     void Check_If_Passwoet_HaeufigVerwendet(){
-          String haeufigVerwendet ="Aa345678" ;
+          String haeufigVerwendet ="passwort11" ;
 //        String nichHaeufigpasswort="Omar Tamr";
           Assertions.assertTrue(PasswortValidierung.IstPasswort_Haufig_Verwendet(haeufigVerwendet));
 //        Assertions.assertTrue(PasswortValidierung.IstPasswort_Haufig_Verwendet("12345678tt"));
+    }
+
+    @Test
+    void Check_If_Passwortenthaelt_Sonderzeichen(){
+        String actualPasswort ="testOmarTamr@" ;
+        String CheckSonderzeichen=PasswortValidierung.Passwortenthaelt_Sonderzeichen(actualPasswort);
+        Assertions.assertEquals(CheckSonderzeichen,actualPasswort);
     }
 
 }

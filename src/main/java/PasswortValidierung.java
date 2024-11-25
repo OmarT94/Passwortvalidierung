@@ -31,10 +31,16 @@ public class PasswortValidierung {
                 "passwort1","passwort2","passwort3","passwort4"};
         for (String commonPasswort: haeufigeVerwendetesPasswort) {
             if (commonPasswort.equals(passwort)) {
-                return true;
+                return false;
             }
-        }return false;
+        }return true;
 
+    }
+
+    public static String Passwortenthaelt_Sonderzeichen(String passwort) {
+        if (passwort != null && passwort.matches(".*[!@#$%^&*()_+-=\\\\[\\\\]{};':\\\\\\\\|,.<>\\\\/?].*")) {
+            return passwort;
+        }return null;
     }
 
 
