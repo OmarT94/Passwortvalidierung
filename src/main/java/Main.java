@@ -28,22 +28,29 @@ public class Main {
        }else {
            System.out.println("😒 Das Passwort soll Groß und Klein Buchstaben enthalten.");}
 
-       if (haeufigbenutzt) {
-           System.out.println("😒 Das Passwort ist Häufig Verwendet, bitte geben Sie ein andere Passwort ein.");
-       }else {
-           System.out.println("😍 Muss ein starkes Passwort Sein");
+       if (haeufigbenutzt )  {
+           System.out.println("😍 Das Passwort ist Ok .");
+
+       }else { System.out.println("😒 Ein starkes Passwort ist immer Sicherer,bitte geben Sie ein andere Passwort ein");
+
        }
 
 
-       if(laengePruefen != null && beinhaltetZiffern != null && beinthaelt_GrossUndKleinBuchstaben != null && !haeufigbenutzt) {
+       if(laengePruefen != null && beinhaltetZiffern != null && beinthaelt_GrossUndKleinBuchstaben != null && haeufigbenutzt) {
 
            System.out.println("\n😍 Starkes Passwort");
        }else {
-           System.out.println("\n😒 Schwaches Passwort");
+           System.out.println("\n😒 Schwaches Passwort und einfach zu erraten!");
        }
-        System.out.println("Drücken, um das Programm zu beenden!!");
+
        scanner.nextLine();
        scanner.close();
+
+
+        System.out.println("Hier ist ein Automatische Empfholene Passwort für Sie generiert.Falls Sie es verwendwn möchten");
+        String sicheresPasswort = PasswortValidierung.erstelleSicheresPasswort();
+        System.out.println(sicheresPasswort);
+        System.out.println("Drücken, um das Programm zu beenden!!");
 
     }
 
