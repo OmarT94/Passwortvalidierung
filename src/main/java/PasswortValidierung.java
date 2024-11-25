@@ -1,5 +1,7 @@
 import org.w3c.dom.ls.LSOutput;
 
+import java.util.Scanner;
+
 public class PasswortValidierung {
 
     public static String IstPasswortGrosserAls_AchtZeichen(String passwort) {
@@ -37,4 +39,7 @@ public class PasswortValidierung {
 
 
 
+
+
 }
+
